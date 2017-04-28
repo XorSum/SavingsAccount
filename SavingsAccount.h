@@ -11,6 +11,9 @@ private:
     void record();
     void accumulate();
 public:
+    SavingsAccount(int id);
+    SavingsAccount(int id,double rate);
+    SavingsAccount(double rate);
     SavingsAccount();
     virtual ~SavingsAccount();
     void show();
