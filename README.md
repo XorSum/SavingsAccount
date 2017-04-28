@@ -1,6 +1,6 @@
 # SavingsAccount
 
-##c++作业
+## c++作业
 
 一个人可以有多个活期储蓄账户，一个活期储蓄账户包括账号（id）、余额（balance）、年利率（rate）等信息，还包括显示账户信息（show）、存款（deposit）、取款（withdraw）、结算利息（settle）等操作。为此，设计一个类SavingsAccount，将id，balance，rate均作为其数据成员，将show，deposit，withdraw，settle均作为其成员函数。
 
