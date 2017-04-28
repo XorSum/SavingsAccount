@@ -8,8 +8,8 @@ private:
     double rate;
     int lastDate;
     double accumulation;
-    void record();
-    void accumulate();
+    void record(double change);
+    void accumulate(int now);
 public:
     SavingsAccount(int id);
     SavingsAccount(int id,double rate);
@@ -17,8 +17,8 @@ public:
     SavingsAccount();
     virtual ~SavingsAccount();
     void show();
-    void deposit();
-    void withdraw();
+    void deposit(double money,int now);
+    void withdraw(double money,int now);
     void settle();
 };
 #endif // SAVINGSACCOUNT_H

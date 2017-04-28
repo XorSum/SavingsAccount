@@ -46,4 +46,24 @@ void SavingsAccount::show()
     cout<<"id="<<id<<endl;
     cout<<"balance="<<balance<<endl;
 }
-
+void SavingsAccount::record(double change)
+{
+    if (change>=0) cout<<"the balance has increased "<<change<<" yuan"<<endl;
+    else cout<<"the balance has decreased "<<-change<<" yuan"<<endl;
+    balance+=change;
+}
+void SavingsAccount::accumulate(int now)
+{
+    accumulation+=(now-lastDate)*balance;
+    lastDate=now;
+}
+void SavingsAccount::withdraw(double money,int now)
+{
+    accumulate(now);
+    record(money);
+}
+void SavingsAccount::deposit(double money,int now)
+{
+    accumulate(now);
+    record(-money);
+}
