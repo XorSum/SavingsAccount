@@ -7,18 +7,18 @@ private:
     double balance;
     double rate;
     int lastDate;
+    int lastSettleData;
     double accumulation;
     void record(double change);
     void accumulate(int now);
 public:
-    SavingsAccount(int id);
-    SavingsAccount(int id,double rate);
-    SavingsAccount(double rate);
     SavingsAccount();
     virtual ~SavingsAccount();
     void show();
     void deposit(double money,int now);
     void withdraw(double money,int now);
-    void settle();
+    void settle(int now);
+    void setId(int id);
+    void setRate(double rate);
 };
 #endif // SAVINGSACCOUNT_H
